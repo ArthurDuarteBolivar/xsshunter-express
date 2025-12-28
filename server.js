@@ -16,10 +16,7 @@ if(!process.env.SSL_CONTACT_EMAIL) {
 
 	const app = await get_app_server();
 
-	require('greenlock-express').init({
-	    packageRoot: __dirname,
-	    configDir: './greenlock.d',
-	    cluster: false,
-	   	maintainerEmail: process.env.SSL_CONTACT_EMAIL,
-	}).serve(app);
+	app.listen(80, () => {
+        console.log('Servidor rodando na porta ' + port);
+    });
 })();
