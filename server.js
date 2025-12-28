@@ -17,6 +17,6 @@ if(!process.env.SSL_CONTACT_EMAIL) {
 	const app = await get_app_server();
 
 	app.listen(80, () => {
-        console.log('Servidor rodando na porta ' + port);
+        console.log('Servidor rodando na porta ');
     });
 })();
